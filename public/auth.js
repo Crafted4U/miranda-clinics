@@ -126,4 +126,22 @@ document.addEventListener('DOMContentLoaded', () => {
       showLogin('Please sign in to access the control panel.');
     }
   }
+
+  // Header transparency toggle: transparent when at top (hero), white when scrolled
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const onScrollHeader = () => {
+      // small threshold to account for bounce/rounded scrolling
+      if (window.scrollY > 10) {
+        header.classList.remove('transparent');
+      } else {
+        header.classList.add('transparent');
+      }
+    };
+    // initialize state
+    onScrollHeader();
+    window.addEventListener('scroll', onScrollHeader, { passive: true });
+    // also update on resize in case viewport units change
+    window.addEventListener('resize', onScrollHeader);
+  }
 });
