@@ -65,6 +65,7 @@ body.control-page, body.queue-page {
 .auth-message { min-height: 1.25rem; margin-top: 0.8rem; color: #b91c1c; font-size: 0.95rem; }
 .hero {
   position: relative;
+  min-height: calc(100dvh - 72px);
   min-height: calc(100vh - 72px);
   display: grid;
   place-items: center;
@@ -106,7 +107,18 @@ body.control-page, body.queue-page {
 .announcement-details, .announcement-hours { color: var(--muted); }
 .schedule-list { display: grid; gap: 0.9rem; }
 .schedule-item { border-top: 1px solid #e5eef4; padding-top: 0.8rem; }
-.site-footer { background: #0f172a; color: white; padding: 2rem 1.5rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.site-footer {
+  background: #0f172a;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  position: static;
+  left: auto;
+  bottom: auto;
+  width: auto;
+}
 .site-footer h3 { margin-top: 0; }
 .page-shell { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
 .hero-card.compact { padding: 1.5rem 1.75rem; }
@@ -289,15 +301,15 @@ main {
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  position: static;
+  left: auto;
+  bottom: auto;
+  width: auto;
   background: #0f172a;
   color: white;
   padding: 18px;
   text-align: center;
-  z-index: 1000;
+  z-index: auto;
 }
 
 footer p {
