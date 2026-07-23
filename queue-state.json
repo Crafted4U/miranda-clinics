@@ -1,0 +1,14 @@
+{
+  "room1": {
+    "number": "021",
+    "doctorIn": true,
+    "room": "room1",
+    "doctor": "Dr. Kenneth Miranda"
+  },
+  "room2": {
+    "doctor": "Dr. Kath Miranda",
+    "number": "002",
+    "doctorIn": true,
+    "room": "room2"
+  }
+}
