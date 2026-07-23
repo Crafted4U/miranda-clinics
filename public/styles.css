@@ -73,17 +73,15 @@ body.control-page, body.queue-page {
 .hero {
   position: relative;
   width: 100vw;
-  /* pull the hero up underneath the sticky header so the image shows behind it */
   margin: calc(-1 * var(--header-height)) 0 0 calc(50% - 50vw);
-  min-height: calc(100dvh - var(--header-height));
-  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh + var(--header-height));
+  min-height: calc(100vh + var(--header-height));
   display: grid;
   place-items: center;
-  /* preserve space for header so hero content isn't covered */
-  padding: calc(var(--header-height) + 1rem) clamp(1.5rem, 4vw, 3rem) clamp(3rem, 6vw, 6rem);
+  padding: calc(var(--header-height) + 1rem) clamp(1.5rem, 4vw, 3rem) 2rem;
   background-color: #e8f1f7;
   background-image: linear-gradient(90deg, rgba(10, 37, 56, 0.8), rgba(14, 63, 88, 0.55)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80');
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -148,7 +146,7 @@ body.control-page, body.queue-page {
 .status-pill.out { background: #fde7e7; color: #b33636; }
 /* Consolidated media queries moved to end of file for clarity */
 
-.hidden { display: none !important; }
+..hidden { display: none !important; }
 
 .container {
   min-height: 100vh;
@@ -156,19 +154,6 @@ body.control-page, body.queue-page {
   flex-direction: column;
   background: #eef3f8;
   color: #2d3748;
-}
-
-header {
-  height: 72px;
-  background: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .logo {
