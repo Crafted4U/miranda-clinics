@@ -22,8 +22,7 @@ if (queueRoot) {
           </div>
         </div>
         <div class="info">
-          <strong>${room.doctor || (index === 0 ? 'Dr. Kenneth Miranda' : 'Dr. Kath Miranda')}</strong><br>
-          <p>${index === 0 ? 'General Consultation, Cardiopulmonary Clearance, Medical Certificates, Fit-to-Work Examinations, and Adult Vaccinations.' : 'Well-Baby/Child Checkups, Sick-Baby/Child Checkups, Immunizations, Ear Piercing, and Follow-Up Visits.'}</p>
+          <strong>${room.doctor || (index === 0 ? 'Dr. Kenneth Miranda' : 'Dr. Kath Miranda')}</strong>
         </div>
         <div class="serving">
           <small>CURRENTLY SERVING</small>
